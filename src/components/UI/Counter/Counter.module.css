@@ -6,13 +6,13 @@
 .Add{
     display: flex;
     justify-content: center;
+    align-items: center;
     border: none;
     background-color: #FCBF49;
-    width: 40rem;
-    height: 40rem;
-    line-height: 40rem;
+    width: 36rem;
+    height: 36rem;
     border-radius: 50%;
-    font-size: 24px;
+    font-size: 14px;
     padding: 0;
 }
 .Sub{

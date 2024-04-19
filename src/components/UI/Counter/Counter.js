@@ -1,5 +1,7 @@
 import React from 'react';
 import classes from './Counter.module.css';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'; //Import components
+import  {faPlus,faMinus} from '@fortawesome/free-solid-svg-icons';// Improt icons
 //Counter components
 const Counter = (props) => {
     return(
@@ -8,14 +10,14 @@ const Counter = (props) => {
             {
                 (props.amount && props.amount !== 0) ? (
                     <>
-                        <button className={classes.Sub}><span>-</span></button>
+                        <button className={classes.Sub}><FontAwesomeIcon icon={faMinus}/></button>
                         <span className={classes.count}>{props.amount}</span>
                     </>
                 ) : null
             }
     
             <button className={classes.Add}>
-                <span>+</span>
+                <FontAwesomeIcon icon={faPlus}/> {/* Use the components */}
             </button>
              
         </div>
