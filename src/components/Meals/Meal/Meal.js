@@ -2,18 +2,18 @@ import React from "react";
 import classes from './Meal.module.css';
 import Counter from "../../UI/Counter/Counter";
 
-const Meal = () => {
+const Meal = (props) => {
     return(
         <div className={classes.Meal}>
             <div className={classes.ImgBox}>
-                <img src="/img/meals/1.jpeg"/>
+                <img src={props.meal.img}/>
             </div>
             <div>
-                <h2 className={classes.Title}>Burger</h2>
-                <p className={classes.Desc}>100% pure beef paired with crisp, tangy cucumbers, onion bits, and delicious tomato sauce offers a classic flavor that's irresistible!</p>
+                <h2 className={classes.Title}>{props.meal.title}</h2>
+                <p className={classes.Desc}>{props.meal.desc}</p>
                 <div className={classes.PriceWrap}>
-                    <span className={classes.Price}>6.5</span>
-                    <Counter amount={2}/>
+                    <span className={classes.Price}>{props.meal.price}</span>
+                    <Counter amount={props.meal.amount}/>
                 </div>
             </div>
 
