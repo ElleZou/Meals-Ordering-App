@@ -62,18 +62,66 @@ const MEALS_DATA=[
 ]
 
 
-
 const App = () => {
   //Create a state to store the food list
   const [mealsData,setMealsData]=useState(MEALS_DATA);
   
   //Create a state to store the shopping cart data
+  const[cartData,setCartData]=useState({
+    items:[],
+    totalAmount:0,
+    totalPrice:0
+  });
 
+  //Add items to cart
+  const addMealHandler= (meal) => {
+    const newCart = {...cartData};
+    //Determine whether the product is contained in the shopping cart
+    if(newCart.items.indexOf(meal) === -1){
+      //Add meal to cart
+      newCart.items.push(meal);
+      meal.amount = 1;
+    }else{
+      //Increase the quantity of goods
+      meal.amount += 1;
+    };
+    //Increase total amount
+      newCart.totalAmount += 1;
+    //Increase total price
+      newCart.totalPrice += meal.price;
+    
+    //Reset shopping cart
+      setCartData(newCart);
+  };
+  //Reduce the number of items
+  const subMealHandler = (meal) => {
+    //Copy shopping cart
+    const newCart = {...cartData};
+
+    //Reduce the number of items
+    meal.amount -= 1;
+    
+    //Check whether the product quantity is 0, if it is 0, remove the product
+    if(meal.amout === 0){
+      newCart.items.splice(newCart.items.indexOf(meal),1)
+    }
+    
+    //Modify the total number of items and total amount
+    meal.totalAmount -= 1;
+    meal.totalPrice -= meal.price;
+
+    setCartData(newCart);
+
+  };
 
   return(
     <div>
-      <Meals mealsData={mealsData}/>
+      <Meals 
+          mealsData={mealsData}
+          onAdd={addMealHandler}
+          onSub={subMealHandler}
+      />
     </div>
-  )
-}
+  );
+};
 export default App;

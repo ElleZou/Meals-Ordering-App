@@ -4,19 +4,25 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'; //Import compone
 import  {faPlus,faMinus} from '@fortawesome/free-solid-svg-icons';// Improt icons
 //Counter components
 const Counter = (props) => {
+    const addButtonHandler = () => {
+        props.onAdd(props.meal);
+    };
+    const subButtonHandler = () => {
+        props.onSub(props.meal);
+    }
     return(
         <div className={classes.Counter}>
 
             {
-                (props.amount && props.amount !== 0) ? (
+                (props.meal.amount && props.meal.amount !== 0) ? (
                     <>
-                        <button className={classes.Sub}><FontAwesomeIcon icon={faMinus}/></button>
-                        <span className={classes.count}>{props.amount}</span>
+                        <button onClick={subButtonHandler} className={classes.Sub}><FontAwesomeIcon icon={faMinus}/></button>
+                        <span className={classes.count}>{props.meal.amount}</span>
                     </>
                 ) : null
             }
     
-            <button className={classes.Add}>
+            <button onClick={addButtonHandler} className={classes.Add}>
                 <FontAwesomeIcon icon={faPlus}/> {/* Use the components */}
             </button>
              
