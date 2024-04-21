@@ -1,9 +1,8 @@
 import React from 'react';
 import Meals from './components/Meals/Meals'; 
 import { useState } from 'react';
-import A from './components/A';
-import B from './components/B';
-import TestContext from './components/store/testContext';
+import CartContext from './components/store/cart-context';
+
 //simulate a set of data
 const MEALS_DATA=[
   {
@@ -77,7 +76,7 @@ const App = () => {
   });
 
   //Add items to cart
-  const addMealHandler= (meal) => {
+  const addItem= (meal) => {
     const newCart = {...cartData};
     //Determine whether the product is contained in the shopping cart
     if(newCart.items.indexOf(meal) === -1){
@@ -97,7 +96,7 @@ const App = () => {
       setCartData(newCart);
   };
   //Reduce the number of items
-  const subMealHandler = (meal) => {
+  const removeItem = (meal) => {
     //Copy shopping cart
     const newCart = {...cartData};
 
@@ -118,18 +117,16 @@ const App = () => {
   };
 
   return(
-    <TestContext.Provider value={{name:'Elle', age:18}}>
+    <CartContext.Provider value={{...cartData,addItem,removeItem}}>
+   
       <div>
         {/*When we access data through Context, it will read the data in the Provider closest to it*/}
-        <A/>
-        <B/>
+  
         <Meals 
             mealsData={mealsData}
-            onAdd={addMealHandler}
-            onSub={subMealHandler}
         />
       </div>
-    </TestContext.Provider>
+    </CartContext.Provider>
   );
 };
 export default App;
