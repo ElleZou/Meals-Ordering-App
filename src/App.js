@@ -1,6 +1,9 @@
 import React from 'react';
 import Meals from './components/Meals/Meals'; 
 import { useState } from 'react';
+import A from './components/A';
+import B from './components/B';
+import TestContext from './components/store/testContext';
 //simulate a set of data
 const MEALS_DATA=[
   {
@@ -115,13 +118,18 @@ const App = () => {
   };
 
   return(
-    <div>
-      <Meals 
-          mealsData={mealsData}
-          onAdd={addMealHandler}
-          onSub={subMealHandler}
-      />
-    </div>
+    <TestContext.Provider value={{name:'Elle', age:18}}>
+      <div>
+        {/*When we access data through Context, it will read the data in the Provider closest to it*/}
+        <A/>
+        <B/>
+        <Meals 
+            mealsData={mealsData}
+            onAdd={addMealHandler}
+            onSub={subMealHandler}
+        />
+      </div>
+    </TestContext.Provider>
   );
 };
 export default App;
