@@ -2,6 +2,7 @@ import React from 'react';
 import Meals from './components/Meals/Meals'; 
 import { useState } from 'react';
 import CartContext from './components/store/cart-context';
+import FilterMeals from './components/FilterMeals';
 
 //simulate a set of data
 const MEALS_DATA=[
@@ -121,7 +122,7 @@ const App = () => {
    
       <div>
         {/*When we access data through Context, it will read the data in the Provider closest to it*/}
-  
+        <FilterMeals/>
         <Meals 
             mealsData={mealsData}
         />
