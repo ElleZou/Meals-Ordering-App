@@ -116,13 +116,19 @@ const App = () => {
     setCartData(newCart);
 
   };
+  //Create a function that filters meals
+  const filterHandler = (keyword) => {
+    const newMealsData = MEALS_DATA.filter(item => item.title.indexOf(keyword) !== -1);
+    setMealsData(newMealsData);
+
+  };
 
   return(
     <CartContext.Provider value={{...cartData,addItem,removeItem}}>
    
       <div>
         {/*When we access data through Context, it will read the data in the Provider closest to it*/}
-        <FilterMeals/>
+        <FilterMeals onFilter={filterHandler}/>
         <Meals 
             mealsData={mealsData}
         />
