@@ -9,9 +9,9 @@ const MEALS_DATA=[
   {
     id:'1',
     title:'Spicy Chicken Steak Burger',
-    desc:"100% pure beef paired with crisp, tangy cucumbers, onion bits, and delicious tomato sauce offers a classic flavor that's irresistible!",
+    desc:"100% pure beef paired with crisp, tangy cucumbers, onion bits, and delicious tomato sauce.",
     price:6.5,
-    img:'/img/meals/1.jpeg'
+    img:'/img/1.jpeg'
 
   },
   {
@@ -19,7 +19,7 @@ const MEALS_DATA=[
     title:'Cod Burger',
     desc:'A delicious and healthy seafood option, featuring freshly selected cod as its main ingredient.',
     price:5.5,
-    img:'/img/meals/2.jpeg'
+    img:'/img/2.jpeg'
 
   },
   {
@@ -27,7 +27,7 @@ const MEALS_DATA=[
     title:'Cheese Beef Burger',
     desc:'Cheese Beef Burger features a thick, juicy beef patty perfectly seasoned and grilled to smoky perfection. ',
     price:6,
-    img:'/img/meals/3.jpeg'
+    img:'/img/3.jpeg'
 
   },
   {
@@ -35,7 +35,7 @@ const MEALS_DATA=[
     title:'Teriyaki Chicken Thigh Burger',
     desc:'Indulge in the hearty flavors of our Grilled Chicken Leg Burger, featuring a succulent and perfectly char-grilled chicken leg. ',
     price:5.5,
-    img:'/img/meals/4.jpeg'
+    img:'/img/4.jpeg'
 
   },
   {
@@ -43,7 +43,7 @@ const MEALS_DATA=[
     title:'Bacon Cheese Beef Burger',
     desc:'Indulge in our Bacon Cheese Beef Burger, a mouthwatering creation crafted for the ultimate burger enthusiast. ',
     price:7.5,
-    img:'/img/meals/5.jpeg'
+    img:'/img/5.jpeg'
 
   },
   {
@@ -51,7 +51,7 @@ const MEALS_DATA=[
     title:'Veggie Beef Burger',
     desc:'This burger features a juicy, premium beef patty, topped with crisp, fresh vegetables including lettuce, tomato, and onions. ',
     price:6,
-    img:'/img/meals/6.jpeg'
+    img:'/img/6.jpeg'
 
   },
   {
@@ -59,7 +59,7 @@ const MEALS_DATA=[
     title:'Double cod cheeseburger',
     desc:'This deluxe burger features two flaky, perfectly seasoned cod fillets, layered between melted slices of rich cheese. ',
     price:8,
-    img:'/img/meals/7.jpeg'
+    img:'/img/7.jpeg'
 
   },
 ]
