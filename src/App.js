@@ -110,8 +110,8 @@ const App = () => {
     }
     
     //Modify the total number of items and total amount
-    meal.totalAmount -= 1;
-    meal.totalPrice -= meal.price;
+    newCart.totalAmount -= 1;
+    newCart.totalPrice -= meal.price;
 
     setCartData(newCart);
 
@@ -128,11 +128,12 @@ const App = () => {
    
       <div>
         {/*When we access data through Context, it will read the data in the Provider closest to it*/}
-        <Cart/>
+        
         <FilterMeals onFilter={filterHandler}/>
         <Meals 
             mealsData={mealsData}
         />
+        <Cart/>
       </div>
     </CartContext.Provider>
   );

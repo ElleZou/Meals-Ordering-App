@@ -35,7 +35,7 @@
     right: -10rem;
 
 }
-.Price{
+.Price, .NoMeal{
     display: flex;
     align-items: center;
     margin-left: 120rem;
@@ -47,6 +47,9 @@
     content: '$';
     font-size: 24rem;
 }
+.NoMeal{
+    color: #aaa;
+}
 .Button{
     border: none;
     background-color: #fcbf49;
@@ -54,4 +57,9 @@
     border-radius: 50px;
     font-size: 30rem;
     font-weight: bold;
+}
+.Disabled{
+    background-color: #777;
+    color: #ccc;
+
 }
