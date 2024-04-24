@@ -4,6 +4,7 @@ import { useState } from 'react';
 import CartContext from './components/store/cart-context';
 import FilterMeals from './components/FilterMeals';
 import Cart from './components/Cart/Cart';
+
 //simulate a set of data
 const MEALS_DATA=[
   {
@@ -134,6 +135,7 @@ const App = () => {
             mealsData={mealsData}
         />
         <Cart/>
+        
       </div>
     </CartContext.Provider>
   );
