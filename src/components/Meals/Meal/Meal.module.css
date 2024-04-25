@@ -39,3 +39,6 @@ img{
 .count{
     font-size: 24rem;
 }
+.DescBox{
+    flex: auto;
+}

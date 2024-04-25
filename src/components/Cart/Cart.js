@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import classes from './Cart.module.css';
 import iconImg from '../../asset/bag.png';
 import CartContext from "../store/cart-context";
-import CartDetails from "./CartDetails";
+import CartDetails from "./CartDetails/CartDetails";
 
 const Cart = () => {
     const ctx = useContext(CartContext);

@@ -1,11 +1,17 @@
 .CartDetails{
     position: absolute;
-    width: 750rem;
+    display: flex;
+    flex-flow: column;
     background-color: #fff;
-    bottom: 120rem;
+    font-size: 20rem;
+    bottom: 0;
+    width: 750rem;
+    max-height: 1200rem;
     padding-bottom: 120rem;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
+
+
 }
 .Header{
     display: flex;
@@ -23,4 +29,7 @@
 }
 .Clear span{
     margin-left: 12rem;
+}
+.MealList{
+    overflow: auto;
 }

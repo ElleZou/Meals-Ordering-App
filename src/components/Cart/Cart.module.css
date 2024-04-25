@@ -10,16 +10,22 @@
     left: 0;
     right: 0;
     margin: auto;
+    z-index: 9999;
+
 
 }
 .Icon{
     width: 80rem;
     position: absolute;
     bottom: -6rem;
-    background-color: #bfa;
 }
 .Icon img{
-    width: 100%;
+    width: 120%;
+    height: 130rem;
+    margin-left: -11rem;
+    margin-bottom: -10rem;
+    
+
 }
 .TotalAmount{
     position: absolute;
@@ -33,6 +39,8 @@
     font-weight: bold;
     font-size: 22rem;
     right: -10rem;
+    top: 8rem;
+   
 
 }
 .Price, .NoMeal{
